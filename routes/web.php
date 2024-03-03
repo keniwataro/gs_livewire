@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\SwitchTheme;
 
@@ -19,3 +20,9 @@ Route::get('/', function () {
 });
 
 Route::get('/switch-theme', SwitchTheme::class);
+
+
+Route::get('/hi', [TestController::class,'hi']);
+Route::get('/hello', [TestController::class,'hello']);
+Route::get('/greet', [TestController::class,'greet']);
+
